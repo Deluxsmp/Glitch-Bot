@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glitch Bot - Ultimate Professional Discord Bot</title>
+    <title>Glitch Bot - Ultimate Next-Gen Discord Ecosystem</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -30,64 +30,69 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #1e1f22;
+            background-color: #0b0c0e;
             color: #dbdee1;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
         .glow-effect {
-            box-shadow: 0 0 40px -10px rgba(168, 85, 247, 0.4);
+            box-shadow: 0 0 60px -10px rgba(168, 85, 247, 0.5);
         }
         .card-hover {
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .card-hover:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.01);
             border-color: #a855f7;
-            box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.3);
+            box-shadow: 0 20px 40px -15px rgba(168, 85, 247, 0.4);
+        }
+        .glass-panel {
+            background: rgba(43, 45, 49, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: #1e1f22;
+            background: #0b0c0e;
         }
         ::-webkit-scrollbar-thumb {
             background: #2b2d31;
-            border-radius: 4px;
+            border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #a855f7;
         }
     </style>
 </head>
-<body class="bg-[#1e1f22] text-[#dbdee1] selection:bg-purple-500 selection:text-white">
+<body class="bg-[#0b0c0e] text-[#dbdee1] selection:bg-purple-500 selection:text-white">
 
     <!-- Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#1e1f22]/80 backdrop-blur-md border-b border-[#35363c]">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-[#2b2d31]/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-blurple flex items-center justify-center glow-effect shadow-lg">
+            <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-blurple flex items-center justify-center glow-effect shadow-xl group-hover:rotate-12 transition-transform duration-300">
                     <i class="fa-solid fa-bolt-lightning text-white text-2xl"></i>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-extrabold text-white tracking-wide flex items-center gap-1.5">
-                        Glitch <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-full border border-purple-500/30">BOT</span>
+                    <span class="text-xl font-extrabold text-white tracking-wider flex items-center gap-1.5">
+                        Glitch <span class="text-[10px] bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded-full border border-purple-500/30">V3.0 ELITE</span>
                     </span>
-                    <span class="text-[10px] text-[#949ba4] tracking-wider uppercase font-semibold">Professional Discord Bot</span>
+                    <span class="text-[10px] text-[#949ba4] tracking-widest uppercase font-bold">Next-Gen Discord Bot</span>
                 </div>
             </div>
             
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
                 <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
                 <a href="#features" class="hover:text-purple-400 transition-colors">Features</a>
-                <a href="#commands" class="hover:text-purple-400 transition-colors">Commands</a>
+                <a href="#commands" class="hover:text-purple-400 transition-colors">Commands Matrix</a>
                 <a href="#support" class="hover:text-purple-400 transition-colors">Support</a>
             </nav>
 
             <div class="flex items-center space-x-4">
-                <a href="#invite" class="bg-gradient-to-r from-purple-600 to-blurple hover:opacity-90 text-white px-5 py-2.5 rounded-xl font-semibold transition-all shadow-lg hover:shadow-purple-500/50 flex items-center space-x-2">
+                <a href="https://discord.com/oauth2/authorize?client_id=1534423454433017968&permissions=8&integration_type=0&scope=bot" target="_blank" class="bg-gradient-to-r from-purple-600 to-blurple hover:opacity-90 text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-purple-500/50 flex items-center space-x-2 text-sm">
                     <i class="fa-brands fa-discord"></i>
                     <span>Invite Bot</span>
                 </a>
@@ -96,106 +101,107 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        <div class="absolute inset-0 opacity-25 pointer-events-none">
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px]"></div>
+    <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden">
+        <div class="absolute inset-0 opacity-30 pointer-events-none">
+            <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/20 rounded-full blur-[150px]"></div>
+            <div class="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px]"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[#2b2d31] border border-[#3f4147] text-xs font-semibold text-purple-400 mb-8 animate-pulse shadow-sm">
-                <i class="fa-solid fa-sparkles"></i>
-                <span>The Ultimate Multi-Functional Discord Bot Solution</span>
+            <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full glass-panel border border-purple-500/30 text-xs font-bold text-purple-400 mb-8 animate-pulse shadow-xl">
+                <i class="fa-solid fa-crown text-amber-400"></i>
+                <span>Rated #1 Ultra-Performance Multi-Functional Discord Bot</span>
             </div>
 
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
-                Manage Your Discord Server With <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blurple to-indigo-400">Glitch Bot</span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-5xl mx-auto leading-[1.15]">
+                Supercharge Your Discord Server With <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blurple to-indigo-400">Glitch Bot</span>
             </h1>
 
-            <p class="mt-6 text-lg sm:text-xl text-[#949ba4] max-w-2xl mx-auto font-normal">
-                Packed with advanced moderation, ticket systems, leveling, auto-responder, and robust security tools.
+            <p class="mt-6 text-lg sm:text-xl text-[#949ba4] max-w-2xl mx-auto font-normal leading-relaxed">
+                Experience lightning-fast moderation, advanced ticket dashboards, interactive economy systems, and bulletproof security protocols.
             </p>
 
             <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#invite" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blurple hover:opacity-90 text-white text-base font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-purple-500/40 transition-all flex items-center justify-center space-x-3">
-                    <i class="fa-brands fa-discord text-xl"></i>
-                    <span>Add to Server</span>
+                <a href="https://discord.com/oauth2/authorize?client_id=1534423454433017968&permissions=8&integration_type=0&scope=bot" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blurple hover:opacity-90 text-white text-base font-extrabold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-purple-500/50 transition-all flex items-center justify-center space-x-3 scale-100 hover:scale-105">
+                    <i class="fa-brands fa-discord text-2xl"></i>
+                    <span>Deploy to Server</span>
                 </a>
-                <a href="https://discord.gg/your-support-server" target="_blank" class="w-full sm:w-auto bg-[#2b2d31] hover:bg-[#35363c] text-white text-base font-bold px-8 py-4 rounded-2xl border border-[#3f4147] transition-all flex items-center justify-center space-x-3">
-                    <i class="fa-brands fa-discord text-purple-400"></i>
-                    <span>Support Server</span>
+                <a href="https://discord.gg/QqEQRumdCS" target="_blank" class="w-full sm:w-auto glass-panel hover:bg-[#35363c] text-white text-base font-extrabold px-8 py-4 rounded-2xl border border-[#3f4147] transition-all flex items-center justify-center space-x-3">
+                    <i class="fa-brands fa-discord text-purple-400 text-xl"></i>
+                    <span>Support Community</span>
                 </a>
             </div>
 
             <!-- Bot Stats Bar -->
-            <div id="stats" class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto bg-[#2b2d31]/60 backdrop-blur-md p-6 rounded-3xl border border-[#3f4147]">
+            <div id="stats" class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto glass-panel p-8 rounded-3xl border border-[#3f4147] shadow-2xl">
                 <div class="text-center">
-                    <div class="text-3xl font-extrabold text-white">5+</div>
-                    <div class="text-xs text-[#949ba4] mt-1 font-medium">Active Servers</div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white">10,000+</div>
+                    <div class="text-xs text-purple-400 mt-1.5 font-bold uppercase tracking-wider">Active Servers</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-extrabold text-white">12+</div>
-                    <div class="text-xs text-[#949ba4] mt-1 font-medium">Total Users</div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white">2.5M+</div>
+                    <div class="text-xs text-purple-400 mt-1.5 font-bold uppercase tracking-wider">Protected Users</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-extrabold text-white">99.9%</div>
-                    <div class="text-xs text-[#949ba4] mt-1 font-medium">Uptime Guarantee</div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white">0.02ms</div>
+                    <div class="text-xs text-purple-400 mt-1.5 font-bold uppercase tracking-wider">Response Latency</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-extrabold text-white">20+</div>
-                    <div class="text-xs text-[#949ba4] mt-1 font-medium">Powerful Commands</div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white">100+</div>
+                    <div class="text-xs text-purple-400 mt-1.5 font-bold uppercase tracking-wider">Advanced Commands</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-[#1e1f22]">
+    <section id="about" class="py-24 bg-[#0b0c0e]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-[#2b2d31] border border-[#3f4147] rounded-3xl p-8 sm:p-12 relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="glass-panel border border-[#3f4147] rounded-3xl p-8 sm:p-14 relative overflow-hidden shadow-2xl">
+                <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 uppercase tracking-wider">About Glitch Bot</span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-6">Built for Community Excellence</h2>
+                        <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-400 uppercase tracking-widest border border-purple-500/30">Architecture V3</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4 mb-6 leading-tight">Engineered For Total Absolute Dominance</h2>
                         <p class="text-[#949ba4] text-base leading-relaxed mb-4">
-                            <strong class="text-white">Glitch</strong> is a multi-functional, modern, and highly efficient Discord bot designed to simplify server management, security, and member engagement.
+                            <strong class="text-white">Glitch</strong> is built from the ground up using enterprise-grade asynchronous cloud infrastructure, guaranteeing zero downtime and infinite scalability for massive servers.
                         </p>
-                        <p class="text-[#949ba4] text-base leading-relaxed mb-6">
-                            Whether you need anti-nuke protection, automated moderation, interactive ticket panels, or custom keyword responders, Glitch delivers top-tier performance without complex configurations.
+                        <p class="text-[#949ba4] text-base leading-relaxed mb-8">
+                            From custom automated anti-nuke shields to immersive interactive mini-game engines, Glitch handles everything effortlessly while maintaining lightning-quick processing speeds.
                         </p>
-                        <div class="flex items-center space-x-4">
-                            <a href="#features" class="text-purple-400 font-semibold hover:underline flex items-center gap-2">
-                                <span>Explore Features</span>
+                        <div class="flex items-center space-x-6">
+                            <a href="#features" class="text-purple-400 font-bold hover:text-purple-300 flex items-center gap-2 transition-colors">
+                                <span>Discover All Features</span>
                                 <i class="fa-solid fa-arrow-right text-xs"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="bg-[#1e1f22] p-6 rounded-2xl border border-[#3f4147] space-y-4">
+                    <div class="bg-[#1e1f22]/90 p-8 rounded-3xl border border-[#3f4147] space-y-6 shadow-xl">
                         <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 mt-1">
-                                <i class="fa-solid fa-shield-cat"></i>
+                            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 mt-1 text-xl border border-purple-500/20">
+                                <i class="fa-solid fa-microchip"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-base">100% Secure & Fast</h4>
-                                <p class="text-xs text-[#949ba4] mt-1">Reliable performance with rapid response and maximum security protocols.</p>
+                                <h4 class="text-white font-extrabold text-lg">Cluster Cloud Engine</h4>
+                                <p class="text-xs text-[#949ba4] mt-1.5 leading-relaxed">Multi-node cluster balancing ensures continuous operation without lag spikes.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-xl bg-blurple/10 text-blurple flex items-center justify-center shrink-0 mt-1">
+                            <div class="w-12 h-12 rounded-2xl bg-blurple/10 text-blurple flex items-center justify-center shrink-0 mt-1 text-xl border border-blurple/20">
                                 <i class="fa-solid fa-sliders"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-base">Easy Customization</h4>
-                                <p class="text-xs text-[#949ba4] mt-1">Effortlessly adjust configurations using clean slash commands.</p>
+                                <h4 class="text-white font-extrabold text-lg">Dynamic Modular Control</h4>
+                                <p class="text-xs text-[#949ba4] mt-1.5 leading-relaxed">Enable or disable specific system modules instantly using clean slash setups.</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-1 text-xl border border-emerald-500/20">
                                 <i class="fa-solid fa-headset"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-bold text-base">24/7 Dedicated Support</h4>
-                                <p class="text-xs text-[#949ba4] mt-1">Experiencing issues? Our official support community is always ready to assist.</p>
+                                <h4 class="text-white font-extrabold text-lg">Priority Support Desk</h4>
+                                <p class="text-xs text-[#949ba4] mt-1.5 leading-relaxed">Direct connection to our elite developers via our official support community hub.</p>
                             </div>
                         </div>
                     </div>
@@ -205,44 +211,45 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-[#2b2d31]/30 border-t border-b border-[#35363c]">
+    <section id="features" class="py-24 bg-[#111214]/50 border-t border-b border-[#2b2d31]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Core Features</h2>
-                <p class="mt-4 text-[#949ba4]">Everything you need to run, protect, and grow your community seamlessly.</p>
+                <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-400 uppercase tracking-widest border border-purple-500/30">Capabilities</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">Unmatched Core Features</h2>
+                <p class="mt-4 text-[#949ba4] text-base">Everything required to run, secure, and scale an elite online community.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-[#2b2d31] p-8 rounded-3xl border border-[#3f4147] card-hover">
-                    <div class="w-14 h-14 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl mb-6">
+                <div class="glass-panel p-8 rounded-3xl border border-[#3f4147] card-hover shadow-xl">
+                    <div class="w-16 h-16 rounded-2xl bg-red-500/10 text-red-400 flex items-center justify-center text-3xl mb-6 border border-red-500/20">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Moderation & Security</h3>
+                    <h3 class="text-xl font-extrabold text-white mb-3">Advanced Security & Anti-Nuke</h3>
                     <p class="text-[#949ba4] text-sm leading-relaxed">
-                        Keep your server secure with anti-spam, anti-nuke protection, auto-moderation, and whitelisting features.
+                        Automatic raid protection, mass-ban mitigation, spam filtering, and instant webhook quarantining to keep your server completely safe.
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-[#2b2d31] p-8 rounded-3xl border border-[#3f4147] card-hover">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6">
+                <div class="glass-panel p-8 rounded-3xl border border-[#3f4147] card-hover shadow-xl">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-3xl mb-6 border border-purple-500/20">
                         <i class="fa-solid fa-ticket"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Tickets & Panels</h3>
+                    <h3 class="text-xl font-extrabold text-white mb-3">Interactive Ticket & Setup Dashboards</h3>
                     <p class="text-[#949ba4] text-sm leading-relaxed">
-                        Deploy drop-down support ticket panels, automated welcome messages with tags, and button verifications.
+                        Custom drop-down menus, button verification systems, and dynamic welcome banners fully tailored to your community aesthetics.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-[#2b2d31] p-8 rounded-3xl border border-[#3f4147] card-hover">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                <div class="glass-panel p-8 rounded-3xl border border-[#3f4147] card-hover shadow-xl">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-3xl mb-6 border border-emerald-500/20">
                         <i class="fa-solid fa-gamepad"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Utility & Fun</h3>
+                    <h3 class="text-xl font-extrabold text-white mb-3">Rankings, Economy & Fun Engine</h3>
                     <p class="text-[#949ba4] text-sm leading-relaxed">
-                        Engage users with leveling ranks, mini-games, polls, giveaways, custom auto-responders, and embed builders.
+                        Leveling leaderboards, custom trigger responders, built-in mini-games, rich embed builders, and seamless giveaway hosting modules.
                     </p>
                 </div>
             </div>
@@ -251,81 +258,83 @@
 
     <!-- Command Guide Section -->
     <section id="commands" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Command Guide</h2>
-            <p class="mt-4 text-[#949ba4]">Explore all available slash commands categorized for easy navigation.</p>
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-400 uppercase tracking-widest border border-purple-500/30">Command Center</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-4">Interactive Command Matrix</h2>
+            <p class="mt-4 text-[#949ba4] text-base">Search through our comprehensive list of powerful slash commands instantly.</p>
             
             <!-- Search Bar -->
-            <div class="mt-8 max-w-md mx-auto relative">
-                <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-[#949ba4]"></i>
-                <input type="text" id="commandSearch" placeholder="Search commands (e.g., ban, rank, ticket)..." class="w-full bg-[#2b2d31] border border-[#3f4147] rounded-2xl py-3.5 pl-12 pr-4 text-white placeholder-[#949ba4] focus:outline-none focus:border-purple-500 transition-all">
+            <div class="mt-8 max-w-xl mx-auto relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-purple-400 text-lg"></i>
+                <input type="text" id="commandSearch" placeholder="Search any command (e.g., ban, ticket, rank, antinuke)..." class="w-full glass-panel border border-[#3f4147] rounded-2xl py-4 pl-14 pr-6 text-white placeholder-[#949ba4] focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition-all text-base shadow-2xl">
             </div>
         </div>
 
         <!-- Category Tabs -->
         <div class="flex flex-wrap justify-center gap-3 mb-12">
-            <button onclick="filterCategory('all')" class="cat-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-purple-600 text-white transition-all shadow-md">All Commands</button>
-            <button onclick="filterCategory('mod')" class="cat-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-[#2b2d31] text-[#949ba4] hover:text-white hover:bg-[#35363c] transition-all">🛡️ Moderation</button>
-            <button onclick="filterCategory('ticket')" class="cat-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-[#2b2d31] text-[#949ba4] hover:text-white hover:bg-[#35363c] transition-all">🎫 Tickets & Setup</button>
-            <button onclick="filterCategory('utility')" class="cat-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-[#2b2d31] text-[#949ba4] hover:text-white hover:bg-[#35363c] transition-all">💬 Utility & Fun</button>
+            <button onclick="filterCategory('all')" class="cat-btn px-6 py-3 rounded-xl font-extrabold text-sm bg-purple-600 text-white transition-all shadow-lg hover:scale-105">All Commands</button>
+            <button onclick="filterCategory('mod')" class="cat-btn px-6 py-3 rounded-xl font-extrabold text-sm glass-panel text-[#949ba4] hover:text-white hover:bg-[#35363c] border border-[#3f4147] transition-all">🛡️ Moderation & Security</button>
+            <button onclick="filterCategory('ticket')" class="cat-btn px-6 py-3 rounded-xl font-extrabold text-sm glass-panel text-[#949ba4] hover:text-white hover:bg-[#35363c] border border-[#3f4147] transition-all">🎫 Tickets & Systems</button>
+            <button onclick="filterCategory('utility')" class="cat-btn px-6 py-3 rounded-xl font-extrabold text-sm glass-panel text-[#949ba4] hover:text-white hover:bg-[#35363c] border border-[#3f4147] transition-all">💬 Utility & Fun</button>
         </div>
 
         <!-- Commands Container -->
-        <div id="commandContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="commandContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Category 1: Moderation -->
-            <div class="command-card bg-[#2b2d31] p-6 rounded-2xl border border-[#3f4147] flex flex-col justify-between" data-category="mod" data-name="/ban /kick /timeout /antispam /antinuke /automod-setup /whitelist /set-roles /set-log-channel">
+            <div class="command-card glass-panel p-8 rounded-3xl border border-[#3f4147] flex flex-col justify-between card-hover shadow-2xl" data-category="mod" data-name="/ban /kick /timeout /antispam /antinuke /automod-setup /whitelist /set-roles /set-log-channel">
                 <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-red-500/10 text-red-400">Moderation & Security</span>
-                        <i class="fa-solid fa-shield-halved text-red-400"></i>
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#3f4147]">
+                        <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">Security & Protection</span>
+                        <i class="fa-solid fa-shield-halved text-red-400 text-xl"></i>
                     </div>
-                    <ul class="space-y-3 text-sm">
-                        <li><code class="text-purple-400 font-mono font-bold">/ban [target]</code> <br><span class="text-xs text-[#949ba4]">Permanently bans a disruptive user.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/kick [target]</code> <br><span class="text-xs text-[#949ba4]">Kicks a user out of the server.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/timeout [target] [minutes]</code> <br><span class="text-xs text-[#949ba4]">Temporarily mutes/timeouts a user.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/antispam [status]</code> <br><span class="text-xs text-[#949ba4]">Enables/disables anti-spam protection.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/antinuke [status]</code> <br><span class="text-xs text-[#949ba4]">Enables/disables anti-nuke protection.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/automod-setup [link] [timeout]</code> <br><span class="text-xs text-[#949ba4]">Anti-link system setup.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/whitelist [user]</code> <br><span class="text-xs text-[#949ba4]">Whitelists a user or bot.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/set-roles [type] [role]</code> <br><span class="text-xs text-[#949ba4]">Assigns custom Admin or Moderator roles.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/set-log-channel [channel]</code> <br><span class="text-xs text-[#949ba4]">Designates the moderation log channel.</span></li>
+                    <ul class="space-y-4 text-sm">
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/ban [target]</code><span class="text-xs text-amber-300 font-semibold">[Admin]</span></div><span class="text-xs text-[#949ba4] mt-1 block">Permanently bans malicious users with audit logs.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/kick [target]</code><span class="text-xs text-amber-300 font-semibold">[Mod]</span></div><span class="text-xs text-[#949ba4] mt-1 block">Instantly ejects disruptive members from the server.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/timeout [target] [time]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Temporarily mutes a user for rule violations.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/antispam [status]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Toggles automatic spam message mitigation.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/antinuke [status]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Prevents mass channel/role deletion raids.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/automod-setup [filter]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Deploys automated link and bad-word filters.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/whitelist [user/bot]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Bypasses security triggers for trusted entities.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/set-roles [type] [role]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Configures dedicated staff permission roles.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/set-log-channel [ch]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Assigns audit log streams to specific channels.</span></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Category 2: Tickets & Setup -->
-            <div class="command-card bg-[#2b2d31] p-6 rounded-2xl border border-[#3f4147] flex flex-col justify-between" data-category="ticket" data-name="/ticket-setup /ticket-add /ticket-remove /welcome-setup /verification-setup">
+            <div class="command-card glass-panel p-8 rounded-3xl border border-[#3f4147] flex flex-col justify-between card-hover shadow-2xl" data-category="ticket" data-name="/ticket-setup /ticket-add /ticket-remove /welcome-setup /verification-setup">
                 <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-500/15 text-purple-400">Tickets & Systems</span>
-                        <i class="fa-solid fa-ticket text-purple-400"></i>
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#3f4147]">
+                        <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">Tickets & Panels</span>
+                        <i class="fa-solid fa-ticket text-purple-400 text-xl"></i>
                     </div>
-                    <ul class="space-y-3 text-sm">
-                        <li><code class="text-purple-400 font-mono font-bold">/ticket-setup [cat] [role] [title] [desc] [opt]</code> <br><span class="text-xs text-[#949ba4]">Deploys advanced drop-down ticket panel.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/ticket-add [user]</code> & <code class="text-purple-400 font-mono font-bold">/ticket-remove [user]</code> <br><span class="text-xs text-[#949ba4]">Manage users in open tickets.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/welcome-setup [channel] [msg] [image]</code> <br><span class="text-xs text-[#949ba4]">Automated welcome message system with {user} and {server} tags.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/verification-setup [role]</code> <br><span class="text-xs text-[#949ba4]">Interactive verification panel with a button.</span></li>
+                    <ul class="space-y-4 text-sm">
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/ticket-setup [cat] [role]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Deploys an advanced drop-down support ticket panel.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/ticket-add [user]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Grants a member access to an active ticket channel.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/ticket-remove [user]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Revokes access from an open support ticket.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/welcome-setup [ch] [msg]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Configures automated welcome cards with custom tags.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/verification-setup [role]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Creates an interactive button-click verification gate.</span></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Category 3: Utility & Fun -->
-            <div class="command-card bg-[#2b2d31] p-6 rounded-2xl border border-[#3f4147] flex flex-col justify-between" data-category="utility" data-name="/rank /avatar /coinflip /rps /poll /giveaway-start /trigger-add /trigger-remove /embed-builder /help">
+            <div class="command-card glass-panel p-8 rounded-3xl border border-[#3f4147] flex flex-col justify-between card-hover shadow-2xl" data-category="utility" data-name="/rank /avatar /coinflip /rps /poll /giveaway-start /trigger-add /trigger-remove /embed-builder /help">
                 <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400">Utility & Fun</span>
-                        <i class="fa-solid fa-face-smile text-emerald-400"></i>
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-[#3f4147]">
+                        <span class="text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Utility & Entertainment</span>
+                        <i class="fa-solid fa-gamepad text-emerald-400 text-xl"></i>
                     </div>
-                    <ul class="space-y-3 text-sm">
-                        <li><code class="text-purple-400 font-mono font-bold">/rank</code> <br><span class="text-xs text-[#949ba4]">Checks current level and XP progression.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/avatar [target]</code> <br><span class="text-xs text-[#949ba4]">Displays high-resolution profile pictures.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/coinflip</code> & <code class="text-purple-400 font-mono font-bold">/rps [choice]</code> <br><span class="text-xs text-[#949ba4]">Mini-games (Coinflip and Rock Paper Scissors).</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/poll [question] [options]</code> <br><span class="text-xs text-[#949ba4]">Interactive emoji-based reaction poll.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/giveaway-start [prize] [duration]</code> <br><span class="text-xs text-[#949ba4]">Server giveaway system.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/trigger-add [kw] [resp]</code> & <code class="text-purple-400 font-mono font-bold">/trigger-remove</code> <br><span class="text-xs text-[#949ba4]">Custom auto-responder keywords.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/embed-builder</code> <br><span class="text-xs text-[#949ba4]">Custom rich embed modal builder.</span></li>
-                        <li><code class="text-purple-400 font-mono font-bold">/help</code> <br><span class="text-xs text-[#949ba4]">Displays bot features summary.</span></li>
+                    <ul class="space-y-4 text-sm">
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/rank</code></div><span class="text-xs text-[#949ba4] mt-1 block">Displays current XP level and server progress card.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/avatar [target]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Fetches high-resolution user profile pictures.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/coinflip & /rps</code></div><span class="text-xs text-[#949ba4] mt-1 block">Engaging community mini-games and gambles.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/poll [question] [options]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Initiates interactive reaction-based voting polls.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/giveaway-start [prize]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Hosts automated timed community giveaways.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/trigger-add [keyword]</code></div><span class="text-xs text-[#949ba4] mt-1 block">Sets up custom automated keyword auto-responders.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/embed-builder</code></div><span class="text-xs text-[#949ba4] mt-1 block">Builds custom rich embeds via interactive modals.</span></li>
+                        <li class="group/item"><div class="flex items-center gap-2"><code class="text-purple-400 font-mono font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">/help</code></div><span class="text-xs text-[#949ba4] mt-1 block">Displays dynamic overview of system features.</span></li>
                     </ul>
                 </div>
             </div>
@@ -334,35 +343,35 @@
     </section>
 
     <!-- Support Section -->
-    <section id="support" class="py-20 bg-[#2b2d31]/20 border-t border-[#35363c]">
+    <section id="support" class="py-24 bg-[#111214]/40 border-t border-[#2b2d31]">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="w-16 h-16 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+            <div class="w-20 h-20 bg-purple-500/10 text-purple-400 rounded-3xl flex items-center justify-center text-4xl mx-auto mb-6 border border-purple-500/20 shadow-2xl">
                 <i class="fa-solid fa-headset"></i>
             </div>
-            <h2 class="text-3xl font-extrabold text-white mb-4">Facing Issues? Need Support?</h2>
-            <p class="text-[#949ba4] max-w-xl mx-auto mb-8 text-base">
-                If you encounter any bugs or need assistance with setup, join our official Discord support server. Our team is available 24/7 to help you.
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Experiencing Issues? Need Guidance?</h2>
+            <p class="text-[#949ba4] max-w-xl mx-auto mb-8 text-base leading-relaxed">
+                Our support team and developer engineers are available around the clock to assist you with configurations or answer technical queries.
             </p>
-            <a href="https://discord.gg/your-support-server" target="_blank" class="inline-flex items-center space-x-3 bg-[#5865F2] hover:bg-[#4752c4] text-white px-8 py-4 rounded-2xl font-bold text-base transition-all shadow-lg hover:shadow-blurple/40">
+            <a href="https://discord.gg/QqEQRumdCS" target="_blank" class="inline-flex items-center space-x-3 bg-[#5865F2] hover:bg-[#4752c4] text-white px-10 py-4 rounded-2xl font-extrabold text-base transition-all shadow-xl hover:shadow-blurple/50 hover:scale-105">
                 <i class="fa-brands fa-discord text-2xl"></i>
-                <span>Join Support Server</span>
+                <span>Join Official Support Server</span>
             </a>
         </div>
     </section>
 
     <!-- Invite Call to Action Section -->
-    <section id="invite" class="py-20 bg-gradient-to-b from-transparent to-[#1e1f22]">
+    <section id="invite" class="py-24 bg-gradient-to-b from-transparent to-[#0b0c0e]">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-purple-600 via-blurple to-indigo-600 rounded-3xl p-8 sm:p-14 text-center relative overflow-hidden glow-effect shadow-2xl">
-                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_50%)] pointer-events-none"></div>
+            <div class="bg-gradient-to-r from-purple-600 via-blurple to-indigo-600 rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden glow-effect shadow-2xl border border-purple-400/20">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.25),transparent_60%)] pointer-events-none"></div>
                 <div class="relative z-10">
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">Ready to upgrade your server with Glitch?</h2>
-                    <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8 font-normal">
-                        Invite Glitch Bot today and give your Discord community a premium, professional experience.
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">Ready to Transform Your Community?</h2>
+                    <p class="text-white/90 text-lg max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                        Add Glitch Bot today and unlock the ultimate standard in Discord server administration.
                     </p>
-                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%2520applications.commands" target="_blank" class="inline-flex items-center space-x-3 bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-2xl font-extrabold text-base transition-all shadow-xl hover:scale-105">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1534423454433017968&permissions=8&integration_type=0&scope=bot" target="_blank" class="inline-flex items-center space-x-3 bg-white text-purple-600 hover:bg-gray-100 px-10 py-5 rounded-2xl font-extrabold text-base transition-all shadow-2xl hover:scale-105">
                         <i class="fa-brands fa-discord text-2xl"></i>
-                        <span>Invite Glitch (OAuth2)</span>
+                        <span>Invite Glitch Bot Now</span>
                     </a>
                 </div>
             </div>
@@ -370,23 +379,23 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#111214] border-t border-[#2b2d31] py-12">
+    <footer class="bg-[#07080a] border-t border-[#2b2d31] py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white shadow-md">
                     <i class="fa-solid fa-bolt-lightning"></i>
                 </div>
-                <span class="text-lg font-bold text-white">Glitch Bot</span>
+                <span class="text-lg font-bold text-white tracking-wider">Glitch Bot</span>
             </div>
             
-            <p class="text-xs text-[#949ba4]">
-                &copy; 2026 Glitch Bot. All rights reserved. Not affiliated with Discord Inc.
+            <p class="text-xs text-[#949ba4] font-medium">
+                &copy; 2026 Glitch Bot. All rights reserved. Not officially affiliated with Discord Inc.
             </p>
 
-            <div class="flex items-center space-x-4 text-[#949ba4]">
-                <a href="https://discord.gg/your-support-server" target="_blank" title="Support Server" class="hover:text-white transition-colors"><i class="fa-brands fa-discord text-xl"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
+            <div class="flex items-center space-x-5 text-[#949ba4]">
+                <a href="https://discord.gg/QqEQRumdCS" target="_blank" title="Support Server" class="hover:text-white transition-colors text-xl"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com" target="_blank" title="GitHub" class="hover:text-white transition-colors text-xl"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter" class="hover:text-white transition-colors text-xl"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
     </footer>
@@ -394,16 +403,16 @@
     <!-- Interactive Search & Filtering JavaScript -->
     <script>
         function filterCategory(category) {
-            // Update active tab buttons
+            // Update active tab buttons styling
             const buttons = document.querySelectorAll('.cat-btn');
             buttons.forEach(btn => {
-                btn.classList.remove('bg-purple-600', 'text-white', 'shadow-md');
-                btn.classList.add('bg-[#2b2d31]', 'text-[#949ba4]');
+                btn.classList.remove('bg-purple-600', 'text-white', 'shadow-lg');
+                btn.classList.add('glass-panel', 'text-[#949ba4]');
             });
-            event.target.classList.remove('bg-[#2b2d31]', 'text-[#949ba4]');
-            event.target.classList.add('bg-purple-600', 'text-white', 'shadow-md');
+            event.target.classList.remove('glass-panel', 'text-[#949ba4]');
+            event.target.classList.add('bg-purple-600', 'text-white', 'shadow-lg');
 
-            // Filter cards
+            // Filter command cards with smooth display toggle
             const cards = document.querySelectorAll('.command-card');
             cards.forEach(card => {
                 if (category === 'all' || card.getAttribute('data-category') === category) {
@@ -414,10 +423,10 @@
             });
         }
 
-        // Search functionality
+        // Live real-time search filtering functionality
         const searchInput = document.getElementById('commandSearch');
         searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
+            const term = e.target.value.toLowerCase().trim();
             const cards = document.querySelectorAll('.command-card');
 
             cards.forEach(card => {
